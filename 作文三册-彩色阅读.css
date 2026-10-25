@@ -92,3 +92,19 @@ a{color:var(--blue);text-underline-offset:.2em}a:hover{text-decoration-thickness
   margin-top: .6em;
   break-inside: avoid;
 }
+
+/* 已有年份引用和范文返回入口，兼容手机与深色阅读。 */
+.reference-link { font-weight: 600; text-decoration: underline; }
+.related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5em 1em;
+  margin: 1rem 0 0;
+  padding-top: .8rem;
+  border-top: 1px solid var(--line);
+  font-size: .84rem;
+  line-height: 1.75;
+}
+.related-label { flex-basis: 100%; color: var(--muted); font-weight: 600; }
+.related-links a { max-width: 100%; overflow-wrap: anywhere; }
+section:target { scroll-margin-top: 24px; }
