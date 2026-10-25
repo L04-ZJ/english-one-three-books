@@ -61,3 +61,34 @@ a{color:var(--blue);text-underline-offset:.2em}a:hover{text-decoration-thickness
   .exam-composition { padding: 19px 16px; }
   .exam-entry { margin-bottom: 3.5rem; }
 }
+
+/* 考试书写：正文采用缩进式，各段之间不留空行。 */
+.composition > .essay-paragraph {
+  text-indent: 4ch;
+  text-align: left;
+  margin: 0;
+}
+/* 书信称呼顶格；结束语与姓名各占一行，置于右下方。 */
+.letter-composition > .letter-line {
+  text-indent: 0;
+}
+.letter-composition > .letter-closing {
+  width: fit-content;
+  max-width: 100%;
+  margin: .6em 0 0 auto;
+  text-align: right;
+  break-inside: avoid;
+}
+/* 通知和会议纪要使用独立标题、正文和署名，不套书信格式。 */
+.composition > .document-title {
+  text-indent: 0;
+  text-align: center;
+  font-weight: 650;
+  margin-bottom: .5em;
+}
+.composition > .document-signature {
+  text-indent: 0;
+  text-align: right;
+  margin-top: .6em;
+  break-inside: avoid;
+}
